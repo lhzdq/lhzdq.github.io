@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jQuery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/fullPage.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/history.css">
+    <script type="text/javascript" src="js/jquery1.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/history.js"></script>
+    <style>
+        #menu {
+            height: 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+        }
+
+        #menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #menu ul li {
+            float: left;
+            width: 20%;
+            height: 100%;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #menu ul li a{
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #menu ul li:hover{
+            background: #c40000;
+        }
+
+        #menu ul li.active{
+            background: #c40000;
+        }
+
+        .section {
+            float: left;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        /*.contain {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: relative;
+            z-index: 3;
+            text-align: center;
+
+        }
+        .section .contain{
+            display: block;
+        }*/
+        /*.box .section:nth-child(2){*/
+            /*background: url("images/wallpaper2.jpg") no-repeat 50% bottom;*/
+        /*}*/
+        .section canvas{
+            width: 100%;height: 100%;
+        }
+        .section1{
+            display: none;
+            width: 100%;
+            height: 100%;
+            /*overflow: hidden;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #2FD0B5;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+    <div class="section">
+        <div id="menu">
+            <ul>
+                <li><a href="#p1" data-menuanchor="p1">首页</a></li>
+                <li><a href="#p2" data-menuanchor="p2">作品</a></li>
+                <li><a href="#p3" data-menuanchor="p3">成长史</a></li>
+                <!--<li><a href="#p4" data-menuanchor="p4">d</a></li>-->
+                <!--<li><a href="#p5" data-menuanchor="p5">e</a></li>-->
+            </ul>
+        </div>
+        <div class="type-js headline">
+            <h1 class="text-js" style="color: #000">hello, welcome to my fullpage</h1>
+        </div>
+
+    </div>
+    <div class="section">
+        <canvas id="canvas" style="background:#111" ></canvas>
+        <!--        <div class="slide">333</div>
+                <div class="slide">1113</div>
+                <div class="slide">444</div>-->
+        <div class="business" style="display: block">
+            <div class="box" style="transform: translate3d(0px, 0px, 0px)!important;; display: block">
+                <div class="caption" style="margin-top: 100px;opacity: 1">
+                    <i></i><span><a href="" style="color: #fff">我的信息</a></span>
+                    <br class="clear"/>
+                </div>
+                <ul class="items list-inline" style="margin-top: 60px; display: block">
+                    <li class="pc">
+                        <i></i><strong>刘豪</strong>
+                        <p><a href="">山西财专</a><br/>信息系</p>
+                    </li>
+                    <li class="mobi">
+                        <i></i><strong>联系方式</strong>
+                        <p>手机 ： 157********<br/></p>
+                    </li>
+                    <li class="sys">
+                        <i></i><strong>pc端作品</strong>
+                        <p><a href="">天猫</a> / <a href="">小米 </a>/ <a href="">凡客</a><br/> <a href="">苹果</a> /<a
+                                href="">京东</a></p>
+                    </li>
+                    <li class="app">
+                        <i></i><strong>手机端</strong>
+                        <p><a href="">优异客</a><br/><a href="">天猫</a></p>
+                    </li>
+                    <li class="host">
+                        <i></i><strong>整站</strong>
+                        <p><br/></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div id="arrow">
+            <ul>
+                <li class="arrowup"></li>
+                <li class="arrowdown"></li>
+            </ul>
+        </div>
+
+        <div id="history">
+
+            <div class="title">
+                <h2>知识成长史</h2>
+                <div id="circle">
+                    <div class="cmsk"></div>
+                    <div class="circlecontent">
+                        <div thisyear="2017" class="timeblock">
+                            <span class="numf"></span>
+                            <span class="nums"></span>
+                            <span class="numt"></span>
+                            <span class="numfo"></span>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="timeyear">YEAR</div>
+                    </div>
+                    <a href="#" class="clock"></a>
+                </div>
+            </div>
+
+            <div id="content">
+                <ul class="list">
+                    <li style="margin-top:-110px;">
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2017</span>
+                                    <span class="md">0208</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">刚刚开课</a></div>
+                                <div class="hisct">懵懵懂，那时候啥也不懂</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2017</span>
+                                    <span class="md">0208</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">刚刚开课</a></div>
+                                <div class="hisct">懵懵懂，那时候啥也不懂</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2017</span>
+                                    <span class="md">0407</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">学了ps,页面美观,页面布局</a></div>
+                                <div class="hisct">觉得自己已经学了不少知识了</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2017</span>
+                                    <span class="md">0508</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">学习js,jquery</a></div>
+                                <div class="hisct">觉得自己就是个菜鸟，啥也不懂</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2013</span>
+                                    <span class="md">0508</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">初期讨论</a></div>
+                                <div class="hisct">在集体探讨下，发现目前的HTML5 CSS3 发展历程已经不能满足需求，集体讨论=，这时候，韩老师之前的设计稿被端上了会议桌。</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2012</span>
+                                    <span class="md">0701</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">灵感迸发</a></div>
+                                <div class="hisct">某天晚上的凌晨三点一刻，预想建立这样一个功能的网站，专为网页设计师。</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2012</span>
+                                    <span class="md">0524</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">HTML5 CSS3 发展历程 上线</a></div>
+                                <div class="hisct">虽然功能还未健全，但是我们已迫不及待的让它去接受广大用户的火眼金睛</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liwrap">
+                            <div class="lileft">
+                                <div class="date">
+                                    <span class="year">2012</span>
+                                    <span class="md">0508</span>
+                                </div>
+                            </div>
+
+                            <div class="point"><b></b></div>
+
+                            <div class="liright">
+                                <div class="histt"><a href="#">初期讨论</a></div>
+                                <div class="hisct">在集体探讨下，发现目前的HTML5 CSS3 发展历程已经不能满足需求，集体讨论=，这时候，韩老师之前的设计稿被端上了会议桌。</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="contain">-->
+
+    </div>
+    <!---->
+    <!--<div class="section">6</div>-->
+    <!--<div class="section">5</div>-->
+</div>
+</body>
+<script src="js/jQuery.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script>
+    $(function () {
+        $(".box").fullpage({
+            //sectionsColor:['cyan', '#c40000', '#7BAABE', '#42c333', 'pink'],
+            scrollingSpeed: 1000,
+            anchors: ["p1", "p2", "p3", "p4", "p5"],
+            fixedElements: "#menu",//固定在哪儿
+            menu: "#menu",//绑定菜单栏
+            recordHistory: true,
+            navigation: true,
+            /*afterLoad:function (a,i) {
+             if(i)
+             }*/
+        })
+    })
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        //获取画布对象
+        var canvas = document.getElementById("canvas");
+        //获取画布的上下文
+        var context = canvas.getContext("2d");
+        //获取浏览器屏幕的宽度和高度
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+        //设置canvas的宽度和高度
+        canvas.width = W;
+        canvas.height = H;
+        //每个文字的字体大小
+        var fontSize = 16;
+        //计算列
+        var colunms = Math.floor(W / fontSize);
+        //记录每列文字的y轴坐标
+        var drops = [];
+        //给每一个文字初始化一个起始点的位置
+        for (var i = 0; i < colunms; i++) {
+            drops.push(0);
+        }
+        //运动的文字
+        var str = "javascript html5 canvas";
+        //4:fillText(str,x,y);原理就是去更改y的坐标位置
+        //绘画的函数
+        function draw() {
+            context.fillStyle = "rgba(0,0,0,0.05)";
+            context.fillRect(0, 0, W, H);
+            //给字体设置样式
+            context.font = "700 " + fontSize + "px  微软雅黑";
+            //给字体添加颜色
+            context.fillStyle = "#2FD0B5";//可以rgb,hsl, 标准色，十六进制颜色
+            //写入画布中
+            for (var i = 0; i < colunms; i++) {
+                var index = Math.floor(Math.random() * str.length);
+                var x = i * fontSize;
+                var y = drops[i] * fontSize;
+                context.fillText(str[index], x, y);
+                //如果要改变时间，肯定就是改变每次他的起点
+                if (y >= canvas.height && Math.random() > 0.99) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        };
+        function randColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        draw();
+        setInterval(draw, 30);
+    };
+</script>
+</html>

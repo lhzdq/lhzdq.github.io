@@ -98,13 +98,13 @@ $(function(){
 				$(".arrowup").removeClass("arrow_active")
 			}),e()
 		)});
-		$(".list").mousewheel(function(b,c){
+		/*$(".list").mousewheel({"on":function(b,c){
 			Math.abs(c);
 			if(a){
 				var d=parseInt($(".list li:first").css("marginTop"));
 				0<c?0!=d&&($(".arrowup").addClass("arrow_active"),$(".arrowup").trigger("click")):d>-110*h&&($(".arrowdown").addClass("arrow_active"),$(".arrowdown").trigger("click"))
 			}
-		});
+		}});*/
 		$(".timeblock").attr("thisyear",c);
 		$(".list li:gt("+(row-1)+")").find(".lileft").css({left:"-400px"});
 		$(".list li:gt("+(row-1)+")").find(".liright").css({right:"-700px"});

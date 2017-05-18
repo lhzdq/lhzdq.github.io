@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var isLei;
+            var t;
+            var x;
+            function leilei() {
+                do {
+                    $(".scene").empty();
+                    for (var i = 0; i < 10; i++) {
+                        for (var j = 0; j < 10; j++) {
+                             isLei = Math.random() > x;  //判断true和 flash 来判断是否有雷
+                            $("<div>")
+                                    .addClass(function () {
+                                        if (isLei) {
+                                            return "block lei"
+                                        } else {
+                                            return "block"
+                                        }
+                                    })
+                                    .attr("id", i + "-" + j)
+                                    .data("pos", {x: i, y: j})
+                                    .mousedown(mousedownEvent)
+                                    .appendTo(".scene")
+                        }
+                    }
+                } while ($(".lei").length != num);
+
+            }
+
+            var besttime=localStorage.besttime?JSON.parse(localStorage.besttime):[];
+            function mousedownEvent(e) {
+                if (e.which == 1) {
+                    leftclick.call(this)
+                } else if (e.which == 3) {
+                    rightclick.call(this)
+
+                }
+            }
+
+            function leftclick() {
+                if ($(this).hasClass("flag")) {
+                    return
+                }
+                if ($(this).hasClass("lei")) {
+                    $(".lei").addClass("show");
+                    alert(`踩到地雷,存活时间为${((c < 10 ? "0" + c : c) + ":" + (b < 10 ? "0" + b : b))}`);
+                    $(".cxkshua").css("display", "block");
+                    $(".time").html("用时" + "00:00");
+                    clearInterval(t);
+                } else {
+                    $(this).addClass("num");
+                    var pos = $(this).data("pos");
+                    var n = 0;
+                    for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                        for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                            if ($("#" + i + "-" + j).hasClass("lei")) {
+                                n++;
+                                console.log(n);
+                            }
+                        }
+                    }
+                    $(this).html(n);
+                    if (n == 0) {
+                        for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                            for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                                var obj = $("#" + i + "-" + j);
+                                if (obj.length == 1 && (!obj.hasClass("num"))) {
+                                    leftclick.call(obj[0])//leftclick.call(obj.get(0))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            function rightclick() {
+                if ($(this).hasClass("num")) {
+                    return;
+                }
+                if ($(this).hasClass("flag")) {
+                    $(this).removeClass("flag");
+                    console.log(num);
+                    num++;
+                } else {
+//                    lei()
+                    num--;
+                    //$(".flagnum").html("flag:"+num);
+                    if (num < 0) {
+                        num++;
+                        alert("重新输入");
+
+                        return;
+
+                    }
+                    $(this).addClass("flag");
+                    if (num == 0) {
+                        if ($(".flag").filter(".lei").length == 2) {
+                            alert(`成功排雷,用时${((c < 10 ? "0" + c : c) + ":" + (b < 10 ? "0" + b : b))}`);
+                            clearInterval(t);
+                                phb();
+                        }
+                    }
+//                    num++;
+                    $(".flagnum").html("flag:" + (num));
+                }
+            }
+
+            var a = 0;
+            var b = 0;
+            var c = 0;
+            t = setInterval(time, 1000);
+            function time() {
+                a++;
+
+                if (a >= 60) {
+                    b = a % 60;
+                    c = Math.floor(a / 60)
+                } else {
+                    b = a;
+                    c = 0
+                }
+                $(".time").html("用时" + (c < 10 ? "0" + c : c) + ":" + (b < 10 ? "0" + b : b));
+            }
+            function phb() {
+                if(besttime.length<3 || (besttime.length>=3 && $(".time").html()<besttime[2].time)){
+                    var player=prompt("请输入姓名");
+                    besttime.push({player,time:$(".time").html()});
+                    besttime.sort(function (a,b) {
+                        if(a.time<b.time){
+                            return -1;
+                        }else{
+                            return 11;
+                        }
+                    });
+                    if(besttime.length>3){
+                        besttime.pop();
+                    }
+
+                    localStorage.besttime=JSON.stringify(besttime);
+                }
+                reWrite();
+            }
+            var p;
+            function gameover() {
+                clearInterval(t);
+                num=p;
+                a=0;
+                $(".flagnum").html("flag:" + num);
+                $(".time").html("用时" + "00:00");
+
+            }
+            function reWrite(){
+                var data=besttime;
+                var str="";
+                data.forEach(function (v) {
+                    str+=`<li>${v.player}    ${v.time}</li>`
+                });
+                    $(".easy").html(str);
+            }
+            alert("选择难度");
+            var num = p;
+            $(".kunnan").click(function () {
+                $(".nandu").toggle()
+            });
+            $(".nandu :nth-child(1)").click(function () {
+                p=2;
+//                time();
+                gameover();
+                t=setInterval(time,1000);
+
+                x=0.98;
+                leilei();
+                $(".cxkshua").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 2;
+                    $(".flagnum").html("flag:" + num);
+                    leilei();
+                    console.clear();
+                    console.log($(".flagnum"));
+                    rightclick();
+
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+
+
+                });
+                $(".cxks").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 2;
+                    $(".flagnum").html("flag:" + num);
+                    leilei();
+                    console.log($(".flagnum"));
+                    rightclick();
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+                });
+            });
+            $(".nandu :nth-child(2)").click(function () {
+                p=10;
+                time();
+                gameover();
+                x=0.90;
+                leilei();
+                $(".cxkshua").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 10;
+                    num++;
+                    leilei();
+                    rightclick();
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+
+                });
+                $(".cxks").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 10;
+                    num++;
+                    leilei();
+                    rightclick();
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+                });
+            });
+            $(".nandu :nth-child(3)").click(function () {
+                num=15;
+                x=0.85;
+                function leilei() {
+                    do {
+                        $(".scene").empty();
+                        for (var i = 0; i < 10; i++) {
+                            for (var j = 0; j < 10; j++) {
+                                var isLei = Math.random() > x;  //判断true和 flash 来判断是否有雷
+                                $("<div>")
+                                        .addClass(function () {
+                                            if (isLei) {
+                                                return "block lei"
+                                            } else {
+                                                return "block"
+                                            }
+                                        })
+                                        .attr("id", i + "-" + j)
+                                        .data("pos", {x: i, y: j})
+                                        .mousedown(mousedownEvent)
+                                        .appendTo(".scene")
+                            }
+                        }
+                    } while ($(".lei").length != num);
+
+                }
+                leilei();
+                $(".cxkshua").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 15;
+                    num++;
+                    leilei();
+                    rightclick();
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+
+                });
+                $(".cxks").click(function () {
+                    $(".cxkshua").css("display", "none");
+                    num = 15;
+                    num++;
+                    leilei();
+                    rightclick();
+                    clearInterval(t);
+                    $(".time").html("用时" + "00:00");
+                    a = 0;
+                    t = setInterval(time, 1000);
+                });
+            });
+            $(document).on("contextmenu", function (e) {
+                e.preventDefault()//处理浏览器默认行为
+            })//
+
+        });//
+
+    </script>
+    <style>
+        .scene {
+            width: 500px;
+            height: 500px;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;
+        }
+        .cxkshua {
+            width: 500px;
+            height: 500px;
+            background: #000;
+            opacity: .5;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 8px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 500px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+        .block {
+            width: 49px;
+            height: 49px;
+            background: #999;
+            float: left;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .control {
+            width: 100px;
+            height: 250px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background: #999;
+        }
+
+        .control>div, time {
+            width: 100%;
+            height: 50px;
+            background: #ccc;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /*.control time{*/
+        /*width: 100%;height: 50px;background: #ccc;text-align: center;line-height: 50px;*/
+        /*}*/
+        .lei {
+
+        }
+
+        .show {
+            background-image: url("lei.jpg");
+            background-size: 100%;
+        }
+
+        .num {
+            color: red;
+            text-align: center;
+            line-height: 50px;
+            background: #fff;
+        }
+
+        .flag {
+            background-image: url("sao.jpg");
+            background-size: 100%;
+        }
+
+        .paihang {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #999;
+            width: 300px;
+            height: 630px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .paihang div:nth-child(1) {
+            height: 30px;
+            width: 100%;
+            background: #ccc;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .paihang div:nth-child(2) {
+            height: 199px;
+            width: 100%;
+            background: #888;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .paihang div:nth-child(3) {
+            height: 199px;
+            width: 100%;
+            background: #888;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .paihang div:nth-child(4) {
+            height: 199px;
+            width: 100%;
+            background: #888;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+        .nandu{
+            width: 100%;
+            height: 150px;
+            background: #444;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="cxkshua">重新开始
+</div>
+<div class="scene">
+
+</div>
+
+<div class="control">
+    <div class="time">用时00:00</div>
+    <div class="flagnum">flag:2</div>
+    <div class="cxks" style="cursor: pointer">重新开始</div>
+    <div class="kunnan" style="cursor: pointer">难度选择
+        <div class="nandu">
+            <div class="jiandan">简单</div>
+            <div class="yibanban">一般</div>
+            <div class="kunnan">困难</div>
+        </div>
+    </div>
+</div>
+
+<div class="paihang">
+    <div>排行榜</div>
+    <div><span>简单</span>
+        <div class="easy">
+            用时:00:00
+        </div>
+    </div>
+    <div>
+        <span>一般</span>
+        <div class="yiban">
+            用时:00:00
+        </div>
+    </div>
+    <div><span>困难</span>
+        <div class="nan">
+            用时:00:00
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

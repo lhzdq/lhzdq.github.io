@@ -1,0 +1,358 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-22 18:42:45
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-03-22 19:32:15
+*/
+body{
+	background: #f5f6fa;
+}
+nav{
+	width: 100%;
+    height: 0.89rem;
+    position: fixed;
+    background: rgba(0, 123, 227, .95);
+    top: 0;
+    left: 0;
+    z-index: 990;
+}
+nav ul{
+	width: 100%;
+	height: 100%;
+}
+nav ul li{
+	width: 20%;
+	height: 100%;
+	font-size: 0.32rem;
+	float: left;
+	color: #fff;
+	line-height: .89rem;
+	text-align: center;
+}
+nav ul .xiahua{
+	border-bottom: .08rem solid #fff;
+}
+.banner{
+	width: 100%;
+    height: 4.14rem;
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner1{
+	width: 100%;
+    height: 100%;
+    background-image: url('../img/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;  
+}
+.hengan{
+	width: 25%;
+	height: .08rem;
+	background: #FF8D12;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+/* 底下大板块 */
+.tea-content{
+	width: 100%;
+    padding: 0.1rem 0.24rem 0;
+}
+.mulu{
+	height: 0.62rem;
+    line-height: 0.62rem;
+    width: 100%;
+}
+.mulu span{
+	color: #494747;
+	font-size: 0.22rem;
+    line-height: 0.7rem;
+    float: left;
+    margin: 0 0.14rem;
+}
+.mulu .wen{
+	width: 1rem;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.nr{
+	width: 100%;
+    background-color: #fff;
+    height: auto;
+    padding: 0 0.2rem;
+}
+.title{
+	width: 100%;
+    height: auto;
+    padding-top: 0.2rem;
+    overflow: hidden;
+}
+.shu{
+	width: 0.04rem;
+    height: 0.2rem;
+    float: left;
+    margin-left: 0;
+    margin-top: 0.07rem;
+    overflow: hidden;
+    display: inline-block;
+}
+.title .shu{
+    background: #01b5ff;
+}
+.title1{
+	width: 6.26rem;
+    height: auto;
+    float: left;
+    margin-left: 0.1rem;
+    margin-top: -0.04rem;
+    color: #333;
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    border-bottom: 1px dashed #b8b8b8;
+    padding-bottom: 0.05rem;
+}
+.xq{
+	width: 100%;
+    height: auto;
+    color: #666;
+    margin-top: 0.2rem;
+    line-height: 0.36rem;
+    font-size: 0.24rem;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #b8b8b8;
+    padding-bottom: 0.2rem;
+}
+.xq .tu{
+	width: 100%;
+	height: auto;
+}
+.xq p img{
+	width: 100%;
+	height: 100%;
+}
+.tubiao{
+	width: 100%;
+    height: 1.4rem;
+    position: relative;
+    padding: 0.2rem 0
+}
+.fenx{
+	float: left;
+    width: 100%;
+    height: 1rem;
+    margin: 0.1rem 0;
+}
+.fenx a{
+	float: left;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.78rem;
+    margin-top: 0.08rem;
+}
+.tu1{
+	background: url('../img/t1.jpg') 0 0 no-repeat;
+	background-size: 100%;
+}
+.tu2{
+	background: url('../img/t2.jpg') 0 0 no-repeat;
+	background-size: 100%;
+}
+.tu3{
+	background: url('../img/t3.jpg') 0 0 no-repeat;
+	background-size: 100%;
+}
+.tu4{
+	background: url('../img/t4.jpg') 0 0 no-repeat;
+	background-size: 100%;
+}
+.fenx .tu5{
+	background: url('../img/t5.jpg') 0 0 no-repeat;
+	background-size: 100%; 
+	margin-right: 0;
+}
+.box-1{
+	width: 110%;
+    height: 1.6rem;
+    margin-left: -0.24rem;
+    overflow: hidden;
+    background-color: #f5f6fa;
+}
+.zi1{
+	width: 100%;
+    height: 0.4rem;
+    padding-left: 0.14rem;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+.zi1 span{
+	font-size: 0.26rem;
+    color: #000;
+    line-height: 0.4rem;
+    float: left;
+}
+.zi1 a{
+	font-size: 0.26rem;
+    width: 5.4rem;
+    color: #01b5ff;
+    line-height: 0.4rem;
+    float: left;
+    margin-left: 0.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.zi2{
+	width: 100%;
+    height: 0.4rem;
+    padding-left: 0.14rem;
+    overflow: hidden;
+    margin-top: 0.16rem;
+}
+.zi2 span{
+	font-size: 0.26rem;
+    color: #000;
+    line-height: 0.4rem;
+    float: left;
+}
+.zi2 a{
+	font-size: 0.26rem;
+    width: 5.4rem;
+    color: #01b5ff;
+    line-height: 0.4rem;
+    float: left;
+    margin-left: 0.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.xiangguan{
+	width: 100%;
+    height: 4rem;
+    background-color: #fff;
+}
+.xtitle{
+	width: 100%;
+    height: auto;
+    padding-top: 0.2rem;
+    overflow: hidden;
+}
+.xgw{
+	width: 6.26rem;
+    height: auto;
+    float: left;
+    margin-left: 0.1rem;
+    margin-top: -0.04rem;
+    color: #333;
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #b8b8b8;
+    padding-bottom: 0.05rem;
+}
+.xtitle .shu{
+	background: #01b5ff;
+}
+.xiangguan ul{
+	width: 100%;
+	height: 100%;
+}
+.xiangguan li{
+	width: 100%;
+    height: 0.6rem;
+}
+.xiangguan ul li div{
+	    float: left;
+    width: 0.24rem;
+    height: 0.24rem;
+    margin-top: 0.2rem;
+    margin-left: -0.08rem;
+    background: url('../img//yuan.png');
+    background-size: 100%;
+}
+.xiangguan ul li a{
+	    float: left;
+    color: #333;
+    width: 5.9rem;
+    margin-left: 0.08rem;
+    height: 0.6rem;
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 版权 */
+.bp{
+	width: 100%;
+    height: 1.2rem;
+    font-size: 0.3rem;
+    overflow: hidden;
+    background: #fff;
+}
+.bp1{
+	color: #666;
+    font-size: 0.2rem;
+    text-align: center;
+    padding-top: 0.18rem;
+}
+.bp2{
+	color: #666;
+    font-size: 0.2rem;
+    text-align: center;
+    padding-top: 0.18rem;
+    padding-top: .1rem;
+}
+/* 服务部分 */
+.fuwuxia{
+	width: 100%;
+	height: .8rem;
+}
+.mianfei{
+	width: 100%;
+	height: .8rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #E7E7E7;
+}
+.mianfei1{
+	width: 30%;
+	height: 100%;
+	float: left;
+	font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}
+.mianfei2{
+	width: 40%;
+	height: 100%;
+	float: left;
+	margin-top: -.1rem;
+	background: #FF8D12;
+	border-radius: .1rem;
+	box-shadow:0 0 0.08rem rgba(0, 0, 0, .2);
+	color: #fff;
+    text-align: center;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.mianfei3{
+	width: 30%;
+	height: 100%;
+	float: left;
+    font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}

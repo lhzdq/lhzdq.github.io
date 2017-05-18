@@ -1,0 +1,916 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-20 16:46:41
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-03-21 18:09:16
+*/
+nav{
+	width: 100%;
+    height: 0.89rem;
+    position: fixed;
+    background: rgba(0, 123, 227, .3);
+    top: 0;
+    left: 0;
+}
+nav ul{
+	width: 100%;
+	height: 100%;
+}
+nav ul li{
+	width: 20%;
+	height: 100%;
+	font-size: 0.32rem;
+	float: left;
+	color: #fff;
+	line-height: .89rem;
+	text-align: center;
+}
+.banner{
+	width: 100%;
+    height: 4.14rem;
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner1{
+	width: 100%;
+    height: 100%;
+    background-image: url('../img/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 服务 */
+.server{
+	width: 100%;
+	height: 6.9rem;
+}
+.server1{
+	/* width: 100%; */
+	height: 100%;
+	margin: 0 .24rem;
+}
+.server-top{
+	height: .9rem;
+	width: 100%;
+	margin: .4rem 0
+}
+.server-top h2{
+	height: .4rem;
+	width: 100%;
+	color: #333;
+	font-size: 0.36rem;
+	line-height: .4rem;
+	text-align: center;
+}
+.server-top h2 span{
+	color: #787879;
+}
+.line{
+	background-image: url('../img/server-line.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+	margin: 0 auto;
+	width: 2.7rem;
+    height: 0.1rem;
+}
+.server-top .s1{
+	height: .4rem;
+	width: 100%;
+	color: #787879;
+	font-size: 0.3rem;
+	line-height: .3rem;
+	text-align: center;
+}
+.server-bottom{
+	height: 5.4rem;
+	width: 6.8rem;
+	margin: .2rem .11rem;
+}
+.server-bottom ul{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.server-bottom ul li{
+	width: 2.1rem;
+    height: 2.5rem;
+	float: left;
+	margin-right: .2rem;
+}
+.server-bottom ul .s1{
+	margin-right: -.2rem;
+}
+.server-bottom ul .s2{
+	margin-right: -.2rem;
+	margin-top: .2rem;
+}
+.server-bottom ul .s3{
+	margin-top: .2rem;
+}
+.s-title1{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s1.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.s-title2{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s2.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.s-title3{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s3.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.s-title4{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s4.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.s-title5{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s5.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.s-title6{
+	height: 1.1rem;
+	width: 2.1rem;
+	padding-left: .8rem;
+	background-image: url('../img/s6.png');
+	background-position: center center;
+	background-size: 100%;
+}
+.server-bottom ul li div{
+	color: #fff;
+    font-size: 0.28rem;
+    line-height: 1.1rem;
+    text-align: center;
+}
+.s-title-bottom1{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #f2a111;
+}
+.s-title-bottom2{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #2f90da;
+}
+.s-title-bottom3{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #f87844;
+}
+.s-title-bottom4{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #1bbf99;
+}
+.s-title-bottom5{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #f8ce68;
+}
+.s-title-bottom6{
+	width: 2.1rem;
+	height: 1.4rem;
+	border: .02rem dashed #c16bbb;
+}
+.server-bottom ul li p{
+	font-size: .24rem;
+	line-height: .32rem;
+	color: #333;
+	text-align: center;
+	padding-top:.2rem; 
+}
+/* UI UX 版块 */
+.ui{
+	width: 100%;
+	height: 7.6rem;
+	overflow: hidden;
+}
+.ui-top{
+	height: 1.3rem;
+	width: 100%;
+	background-image: url('../img/ui ux.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.4rem 0;
+}
+.ui-top .ui1{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #fff;
+    font-weight: 400;
+}
+.ui-line{
+	height: .1rem;
+	width: 2.7rem;
+	background-image: url('../img/ui-line.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.ui-top .ui2{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    font-weight: 400;
+}
+.ui-bottom{
+	width: 7.02rem;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
+.ui-jieshao{
+	height: 3.15rem;
+	width: 100%;
+	border: .02rem dashed #030000;
+}
+.ui-jieshao p{
+	height: 40%;
+	width: 100%;
+	font-size: .26rem;
+	text-align: center;
+	margin-top: .1rem;
+	color: #333;
+	line-height: .36rem;
+	font-weight: 400;
+}
+.j1{
+	margin-bottom: .3rem;
+}
+.j1 span{
+	color: #00a8ff;
+}
+.zhuo{
+	width: 100%;
+    height: 3.74rem;
+    background-image: url('../img/ui ux1.png');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/* 前景开始 */
+.qj{
+	margin-top: -0.26rem;
+    height: 13.7rem;
+    width: 100%;
+}
+.qj-top{
+	height: 1.3rem;
+	width: 100%;
+	background-image: url('../img/qj1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.4rem 0;
+	position: relative;
+    z-index: 20;      /* 不懂 */
+}
+.qj-top .ui1{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #fff;
+    font-weight: 400;
+}
+.qj-line{
+	height: .1rem;
+	width: 2.7rem;
+	background-image: url('../img/ui-line.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.qj-top .ui2{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    font-weight: 400;
+}
+.qj-bottom{
+	width: 100%;
+    height: 12.4rem;
+    background: #1b1d32;
+    margin-top: -0.4rem;
+    padding-top: 0.4rem;
+}
+.qj-bottom-1{
+	width: 2.46rem;
+	height: .8rem;
+	margin: 0 auto;
+	padding: .2rem;
+	border-bottom: .02rem dashed #f5f5f5;
+	font-size: 0.3rem;
+	color: #fff;
+	position: relative;
+	text-align: center;
+	line-height: .3rem; 
+}
+.qj-henxian{
+	width: 100%;
+	height: .02rem;
+	position: absolute;
+	left: 0;
+	bottom: .1rem;
+	background: #fff;
+}
+.qj-bottom-2{
+	height: 4.17rem;
+	width: 7.02rem;
+	margin: 0 auto;
+	margin-top: .25rem;
+	background-image: url('../img/qj2.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.qj-bottom-2 div{
+	height: 0.32rem;
+    position: absolute;
+    left: 1.1rem;
+
+}
+.qj1{
+	top: 0.48rem;
+    background: #fff100;
+    position: absolute;
+    width: 0.82rem;
+}
+.qj2{
+	top: 1.1rem;
+    background: #1dffbd;
+    position: absolute;
+    width: 1.3rem;
+}
+.qj3{
+    top: 1.71rem;
+    background: #0c51ff;
+    position: absolute;
+    width: 4.8rem;
+}
+.qj4{
+	top: 2.30rem;
+    background: #00a8ff;
+    position: absolute;
+    width: 2.76rem;
+}
+.qj5{
+	top: 2.96rem;
+    background: #1befe8;
+    position: absolute;
+    width: 0.92rem;
+}
+.qj-xz{
+	width: 7.02rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    margin-top: .3rem;
+    position: relative;
+}
+.qj-xz .qj-xz-left{
+	width: 3.41rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.qj-xz .qj-xz-right{
+	width: 3.41rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.qj-xz li{
+	padding-top: 0.14rem;
+    width: 3.41rem;
+    height: 2.21rem;
+    margin-top: 0.19rem;
+    background-image: url('../img/qj3.png');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.qj-xz li p{
+	font-size: .24rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 1.67rem;
+}
+.qj-xz li span{
+	width: 100%;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    display: block;
+}
+.chakan{
+	width: 2.99rem;
+	height: .8rem;
+	margin: .4rem 2.25rem .4rem 2.26rem;
+	background-image: url('../img/qj4.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-size: .3rem;
+	text-align: center;
+	line-height: .8rem;
+}
+/* 优秀学员板块 */
+.yx{
+	width: 100%;
+	height: 7rem;
+	margin-top: -.7rem;
+}
+.yx-top{
+	height: 1.3rem;
+	width: 100%;
+	background-image: url('../img/yx1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.4rem 0;
+	position: relative;
+    z-index: 20;      /* 不懂 */
+}
+.yx-top .ui1{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #fff;
+    font-weight: 400;
+}
+.yx-line{
+	height: .1rem;
+	width: 2.7rem;
+	background-image: url('../img/ui-line.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.yx-top .ui2{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    font-weight: 400;
+}
+.yx-bottom{
+	width: 7.02rem;
+	height: 4.1rem;
+	margin: 0 auto;
+}
+.yx-bottom-1{
+	width: 100%;
+	height: 100%;
+	margin-top: .4rem;
+}
+.title-name{
+	width: 100%;
+	height: .6rem;
+}
+.title-name p{
+	color: #fff;
+	font-size: .26rem;
+	line-height: .6rem;
+	text-align: center;
+	float: left;
+	border-radius: .1rem .1rem 0 0;
+}
+.name{
+	width: 1.3rem;
+	height: 100%;
+	background: #40abfd;
+}
+.xinzi{
+	width: 1.8rem;
+	height: 100%;
+	background: #219eff;
+}
+.qita{
+	width: 3.92rem;
+	height: 100%;
+	background: #118ded;
+}
+.box{
+	height: 3.5rem;
+	width: 100%;
+	border: .02rem solid #1875ff;
+}
+.box li{
+	width: 100%;
+	height:.7rem;
+}
+.box .box2{
+	background-color: #EEEEEE;
+}
+.box .box1{
+	background-color: #F5F6FA;
+}
+.box3{
+	border-bottom:  .02rem solid #1875ff;
+}
+.box ul li p{
+	font-size: .26rem;
+	float: left;
+	line-height: .7rem;
+	text-align: center;
+}
+.b1{
+	width: 1.2rem;
+	height: 100%;
+}
+.b2{
+	width: 1.8rem;
+	height: 100%;
+	color: #feaf34;
+}
+.b3{
+	height: 100%;
+	width:3.92rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* 课程规划版块 */
+.gh{
+	height: 17.8rem;
+	width: 100%;
+	background: #EFF0F4;
+	margin-top: .4rem;
+}
+.gh-top{
+	height: 1.3rem;
+	width: 100%;
+	background-image: url('../img/gh1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.4rem 0;
+	position: relative;
+    z-index: 20;      /* 不懂 */
+}
+.gh-top .ui1{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #fff;
+    font-weight: 400;
+}
+.gh-line{
+	height: .1rem;
+	width: 2.7rem;
+	background-image: url('../img/ui-line.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.gh-top .ui2{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    font-weight: 400;
+}
+.gh-bottom{
+	width: 7.02rem;
+	height: 16.2rem;
+	margin: 0 auto;}
+.gh-bottom ul{
+	width: 100%;
+	margin-top: .3rem;
+}
+.gh-bottom ul li{
+	overflow: hidden;
+	height: auto;
+	width: 100%;
+	background: #fff;
+	margin-top: .4rem;
+}
+.gh1{
+	height: auto;
+	border-top: 2px solid #f88c00;
+}
+.gh2{
+	height: auto;
+	border-top: 2px solid #32afff;
+}
+.gh3{
+	height: auto;
+	border-top: 2px solid #eb6877;
+}
+.gh4{
+	height: auto;
+	border-top: 2px solid #22ac38;
+}
+.gh5{
+	height: auto;
+	border-top: 2px solid #ea61d5;
+}
+.gh6{
+	height: auto;
+	border-top: 2px solid #13e5e3;
+}
+.gh-bottom ul li div{
+	height: .52rem;
+	width: 100%;
+	padding: .1rem .2rem;
+	font-size: 0.3rem;
+	margin-top: 0.2rem;
+    line-height: 0.32rem;
+}
+.gh-bottom ul li p{
+	height: auto;
+	width: 100%;
+	padding: 0.2rem;
+	margin-top: .1rem;
+	border-top: .02rem dashed #a0a0a0;
+	font-size: 0.26rem;
+    line-height: 0.36rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+/* 设计版块 */
+.sj{
+	height: 10.39rem;
+	width: 100%;
+	background: #F5F6FA;
+	padding-top: .5rem;
+	position: relative;
+}
+.sj-bottom-1{
+    width: 7.02rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.sj-bottom-2{
+	margin-top: .5rem;
+}
+.sj-bottom ul{
+	height: 2.63rem;
+	width: 100%;
+	margin-top: .1rem;
+}
+.sj1 li{
+	width: 3.46rem;
+    height: 2.63rem;
+    float: left;
+    background: pink;
+}
+.sj1 .sj1-1{
+	margin-right: .1rem;
+}
+.sj-bottom img{
+	width: 100%;
+	height: 100%;
+}
+/* 0元试学 */
+.sx{
+	height: 7.85rem;
+	width: 100%;
+	background: #F5F6FA;
+	padding-top: .5rem;
+}
+.sx-top{
+	height: 1.3rem;
+	width: 100%;
+	background-image: url('../img/yx1.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.4rem 0;
+	position: relative;
+    z-index: 20;      /* 不懂 */
+}
+.sx-top .ui1{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.36rem;
+    color: #fff;
+    font-weight: 400;
+}
+.sx-line{
+	height: .1rem;
+	width: 2.7rem;
+	background-image: url('../img/ui-line.png');
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.sx-top .ui2{
+    width: 100%;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    font-weight: 400;
+}
+.sx-top1{
+	height: .85rem;
+	width: 100%;
+	margin: 0 auto;
+}
+.sx-top1 p{
+	font-size: 0.28rem;
+	line-height: .85rem;
+	color: #333;
+	text-align: center;
+}
+.biaodan{
+	height: 5.2rem;
+	width: 100%;
+}
+
+.nei{
+	width: 6.1rem;
+	height: 5.2rem;
+	margin: 0 auto;
+}
+.biaodan .biao1{
+	width: 100%;
+	height: 1rem;
+	position: relative;
+	font-size: 0.3rem;
+    line-height: 0.6rem;
+
+}
+.biaodan .biao2{
+	width: 100%;
+	height: 1.2rem;
+}
+.biaodan .biao1 .zi{
+	width:1.2rem;
+	height: .6rem;
+	position: absolute;
+	float: left;
+	top: .3rem;
+	padding: .08rem 0 .08rem .16rem;
+}
+.biaodan .biao1 span{
+	color: #333;
+	margin-left: .2rem;
+
+}
+.input-text{
+	float: left;
+    color: #333;
+    font-size: 0.3rem;
+    background: url('../img/input.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 4.0rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    margin-top: 0.4rem;
+    margin-left:1.2rem;
+	border: none;
+	outline: none;
+}
+.biao2-1{
+	width: 4.2rem;
+	height: .8rem;
+	margin-left: 1.28rem;
+	margin-top: .4rem;
+	float: left;
+}
+.biao2-1 input{
+	background-image: url('../img/qj4.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: block;
+	width: 2.99rem;
+    height: 0.8rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .3rem;
+}
+/* 版权信息 */
+.bq{
+	height: 1.2rem;
+	width: 100%;
+	font-size: 0.3rem;
+	background: #F5F6FA;
+}
+.bq{
+	color: #666;
+    font-size: 0.2rem;
+    text-align: center;
+}
+.bq1{
+	padding: .18rem;
+}
+.bq2{
+	padding: .1rem;
+}
+.zuixia{
+	height: .8rem;
+	width: 100%;
+}
+/* 服务部分 */
+.fuwuxia{
+	width: 100%;
+	height: .8rem;
+}
+.mianfei{
+	width: 100%;
+	height: .8rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #E7E7E7;
+}
+.mianfei1{
+	width: 30%;
+	height: 100%;
+	float: left;
+	font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}
+.mianfei2{
+	width: 40%;
+	height: 100%;
+	float: left;
+	margin-top: -.1rem;
+	background: #FF8D12;
+	border-radius: .1rem;
+	box-shadow:0 0 0.08rem rgba(0, 0, 0, .2);
+	color: #fff;
+    text-align: center;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.mianfei3{
+	width: 30%;
+	height: 100%;
+	float: left;
+    font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}

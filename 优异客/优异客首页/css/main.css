@@ -1,0 +1,270 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-20 13:39:43
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-03-21 08:45:59
+*/
+/* 顶部开始 */
+.dingbu{
+	height: .89rem;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #007BE3;
+}
+.box{
+	height: .84rem;
+	width: 2.27rem;
+	margin: 0 auto;
+	padding-top: .16rem;
+}
+.logo{
+	width: .7rem;
+	height: .67rem;
+	float: left;
+	background-image: url('../img/loge.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+.dingbu h3{
+	font-size: .36rem;
+	margin-left: .16rem;
+	line-height: .68rem;
+	float: left;
+	color: #fff;
+}
+header{
+	height: 4.21rem;
+	width:100%;
+	background-image: url('../img/banner1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+}
+/* 顶部结束 */
+/* 选择部分开始 */
+.banner-bottom{
+	height: 4.84rem;
+	width: 100%;
+	padding: .28rem .2rem 0 .2rem;
+	background: #F5F6FA;
+	
+}
+.banner-bottom ul{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	display:-webkit-flex;
+	flex-wrap:nowrap;
+	flex-wrap:wrap;
+	/* flex-direction: column; */
+	justify-content:space-around;
+}
+.banner-bottom li{
+	width: 1.55rem;
+    height: 1.96rem;
+    float: left;
+    margin-bottom: 0.32rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #000;
+}
+.bb1-tu{
+	height: 1.56rem;
+	width: 100%;
+	border-radius: 0.25rem;
+	background-color:#fff;
+	margin-bottom: 0.16rem;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+}
+.bb1-tu1{
+	height: 1.05rem;
+	width: 1.05rem;
+}
+.bb1-tu img{
+	width: 100%;
+	height: 100%;
+}
+/* .banner-bottom .bb1{
+	width: 1.55rem;
+    height: 1.96rem;
+	background: red;
+    float: left;
+    margin-right: 0.3rem;
+    margin-bottom: 0.32rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #000;
+}
+.banner-bottom .bb2{
+	width: 1.55rem;
+    height: 1.96rem;
+	background: red;
+    float: left;
+    margin-bottom: 0.32rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #000;
+} */
+/* 选择部分结束 */
+/* 服务部分开始 */
+.server{
+	width: 100%;
+	height: 4.25rem;
+}
+.server-top{
+	height: .63rem;
+	width: 100%;
+	border-bottom: .02rem solid #e8e8e8;
+	font-size: .24rem;
+	line-height: .63rem;
+	text-align: center;
+	color: #3C8FC6 ;
+}
+.server-bottom{
+	width: 100%;
+	height: 2.18rem;
+	border-bottom: .02rem solid #e8e8e8;
+}
+.server-bottom li{
+	width: 50%;
+	height: 100%;/*  */
+	float: left;
+	padding: 0.38rem 0rem 0.48rem 0.16rem;
+}
+.server-bottom .server-bottom-left{
+	border-right: .02rem solid #e8e8e8;
+}
+.server-bottom-left-left{
+	width: 1.8rem;
+	height: 100%;
+	float: left;
+}
+.server h2{
+	font-size:0.24rem;
+}
+.server h3{
+	font-size:0.18rem;
+	color: #999;
+}
+.server-bottom-left-right{
+	width: 1.5rem;
+    height: 100%;
+    float: left;
+    background: #fff url('../img/quanbu.png') 0 -4.4rem ;
+    background-size: 2rem;
+}
+.server-bottom-left-right-1{
+	width: 1.5rem;
+    height: 100%;
+    float: left;
+    background: #fff url('../img/quanbu.png') 0 -5.94rem ;
+    background-size: 2rem;
+}
+.dt{
+	height: 1.38rem;
+	width: 100%;
+}
+.dt li{
+	width: 33.333333%;
+	height: 100%;
+	float: left;
+	padding: 0.4rem 0 0.38rem 0.2rem;	
+}
+.dt1{
+	border-right: .02rem solid #e8e8e8;
+}
+.dt1-left{
+	width: .6rem;
+	background: url('../img/dt1.png');
+	background-size: cover;
+	height: 100%;
+	float: left;
+}
+.dt1-left1{
+	width: .6rem;
+	background: url('../img/dt2.png');
+	background-size: cover;
+	height: 100%;
+	float: left;
+}
+.dt1-left2{
+	width: .6rem;
+	background: url('../img/dt3.png');
+	background-size: cover;
+	height: 100%;
+	float: left;
+}
+.dt1-right{
+	width: 1.5rem;
+	height: .6rem;
+	margin-left: .1rem;
+	float: left;
+}
+/* 服务部分结束 */
+.fuwuxia{
+	width: 100%;
+	height: .8rem;
+}
+.mianfei{
+	width: 100%;
+	height: .8rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #E7E7E7;
+}
+.mianfei1{
+	width: 30%;
+	height: 100%;
+	float: left;
+	font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}
+.mianfei2{
+	width: 40%;
+	height: 100%;
+	float: left;
+	margin-top: -.1rem;
+	background: #FF8D12;
+	border-radius: .1rem;
+	box-shadow:0 0 0.08rem rgba(0, 0, 0, .2);
+	color: #fff;
+    text-align: center;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.mianfei3{
+	width: 30%;
+	height: 100%;
+	float: left;
+    font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+}
+/* .mianfei .mf1{
+	font-size: 0.24rem;
+    color: #000;
+    text-align: left;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+    height: 100%;
+    width: 100%;
+}
+.mianfei .mf3{
+	font-size: 0.24rem;
+    color: #000;
+    text-align: left;
+    line-height: 0.9rem;
+    background: #e7e7e7;
+} */

@@ -88,6 +88,7 @@ $(function(){
 		};
 		$(".arrowdown").click(function(){
 			a&&parseInt($(".list li:first").css("marginTop"))> -110*h&&(d++,b--,a=!1,$(".list li").eq(d-1).liOut(),$(".list li").eq(d+row-1).liIn(),$(".list li:first").animate({marginTop:110*b},600,"easeInOutQuad",function(){
+					console.log(b)
 				a=!0;$(".arrowdown").css("opacity",1);
 				$(".arrowdown").removeClass("arrow_active")
 			}),e()
@@ -98,13 +99,12 @@ $(function(){
 				$(".arrowup").removeClass("arrow_active")
 			}),e()
 		)});
-		/*$(".list").mousewheel({"on":function(b,c){
+		$(".list").mousewheel(function(b,c){
 			Math.abs(c);
 			if(a){
 				var d=parseInt($(".list li:first").css("marginTop"));
 				0<c?0!=d&&($(".arrowup").addClass("arrow_active"),$(".arrowup").trigger("click")):d>-110*h&&($(".arrowdown").addClass("arrow_active"),$(".arrowdown").trigger("click"))
-			}
-		}});*/
+		}});
 		$(".timeblock").attr("thisyear",c);
 		$(".list li:gt("+(row-1)+")").find(".lileft").css({left:"-400px"});
 		$(".list li:gt("+(row-1)+")").find(".liright").css({right:"-700px"});

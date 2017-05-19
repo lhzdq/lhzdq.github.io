@@ -3661,21 +3661,21 @@
         <div class="miaosha-header-right">
             <span>当前场次</span>
             <div class="time">
-                <div class="hour">
+                <div class="hour hh">
                     00
                 </div>
                 <div class="split">
                     <i class="split-top"></i>
                     <i class="split-bottom"></i>
                 </div>
-                <div class="hour">
+                <div class="hour ff">
                     00
                 </div>
                 <div class="split">
                     <i class="split-top"></i>
                     <i class="split-bottom"></i>
                 </div>
-                <div class="hour">
+                <div class="hour mm">
                     00
                 </div>
             </div>
@@ -7835,5 +7835,21 @@ var num1234=0;
         console.log(num12)
      }
         setInterval(move1236,1000)
+
+
+    setInterval(function(){
+    var date=new Date()
+    var yuji=new Date(2017,4,21,0,0,0);
+    var cha=yuji.getTime()-date.getTime()
+    var shi=Math.floor(cha/(1000*60*60))
+    $(".hh").html(shi<10?"0"+shi:shi)
+    var fen=Math.floor((cha/(1000*60))%60)
+    $(".ff").html(fen<10?"0"+fen:fen)
+    var miao=Math.floor((cha/1000)%60)
+    $(".mm").html(miao<10?"0"+miao:miao)
+    console.log(cha)
+    console.log()
+},1000)
+
 </script>
 </html>

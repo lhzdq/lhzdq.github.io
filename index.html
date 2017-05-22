@@ -1,403 +1,318 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <link rel="stylesheet" href="css/index.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/jquery1.js"></script>
-    <script src="js/jQuery.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/fullPage.min.js"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/history.css">
-    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.js"></script>
-    <script type="text/javascript" src="js/history.js"></script>
-    <style>
-        #menu {
-            height: 30px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: #fff;
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
 
-        #menu ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
+<title>个人主页</title>
 
-        #menu ul li {
-            float: left;
-            width: 33.333%;
-            height: 100%;
-            font-size: 20px;
-            line-height: 30px;
-            text-align: center;
-        }
-        #menu ul li a{
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-            line-height: 30px;
-            text-align: center;
-        }
-        #menu ul li:hover{
-            background: #c40000;
-        }
+<!--公共样式-->
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 
-        #menu ul li.active{
-            background: #c40000;
-        }
+<!--公共脚本-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<!--dialog-->
+<!--artdiolag-->
+<script type="text/javascript" src="js/artDialog4_jb51net/jquery.artDialog.js"></script>
+<script type="text/javascript" src="js/artDialog4_jb51net/artDialog.iframe.js"></script>
+<link rel="stylesheet" type="text/css" href="js/artDialog4_jb51net/skins/default.css"/>
 
-        .section {
-            float: left;
-            height: 100%;
-            width: 100%;
-            display: block;
-        }
+<!--前端脚本-->
+<script type="text/javascript" src="js/common.js"></script>
 
-        /*.contain {
-            width: 100%;
-            height: 100%;
-            display: none;
-            position: relative;
-            z-index: 3;
-            text-align: center;
 
-        }
-        .section .contain{
-            display: block;
-        }*/
-        /*.box .section:nth-child(2){*/
-            /*background: url("images/wallpaper2.jpg") no-repeat 50% bottom;*/
-        /*}*/
-        .section canvas{
-            width: 100%;height: 100%;
-        }
-        .section1{
-            display: none;
-            width: 100%;
-            height: 100%;
-            /*overflow: hidden;*/
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #2FD0B5;
-        }
-    </style>
 </head>
+
 <body>
-<div class="box">
-
-    <div class="section">
-        <div id="menu">
-            <ul>
-                <li><a href="#p1" data-menuanchor="p1">首页</a></li>
-                <li><a href="#p2" data-menuanchor="p2">作品</a></li>
-                <li><a href="#p3" data-menuanchor="p3">成长史</a></li>
-                <!--<li><a href="#p4" data-menuanchor="p4">d</a></li>-->
-                <!--<li><a href="#p5" data-menuanchor="p5">e</a></li>-->
+	<!--导航-->
+	<div class="menu" id="menu">
+    	<div class="container_1000 m_center cf">
+        	
+        	<ul class="nav">
+            	<li data-menuanchor="page1" class="active"><a href="#page1">简介</a></li>
+                <li data-menuanchor="page2"><a href="#page2">技能</a></li>
+                <li data-menuanchor="page3"><a href="#page3">案例作品</a></li>
+                <li data-menuanchor="page4"><a href="#page4">联系方式</a></li>
             </ul>
         </div>
-        <div class="type-js headline">
-            <h1 class="text-js" style="color: #000">hello, welcome to My homepage</h1>
-        </div>
-
     </div>
-    <div class="section">
-        <canvas id="canvas" style="background:#111" ></canvas>
-        <!--        <div class="slide">333</div>
-                <div class="slide">1113</div>
-                <div class="slide">444</div>-->
-        <div class="business" style="display: block">
-            <div class="box" style="transform: translate3d(0px, 0px, 0px)!important;; display: block">
-                <div class="caption" style="margin-top: 100px;opacity: 1">
-                    <i></i><span><a href="" style="color: #fff">我的信息</a></span>
-                    <br class="clear"/>
-                </div>
-                <ul class="items list-inline" style="margin-top: 60px; display: block">
-                    <li class="pc">
-                        <i></i><strong>刘豪</strong>
-                        <p><a href="">山西财专</a><br/>信息系</p>
-                    </li>
-                    <li class="mobi">
-                        <i></i><strong>联系方式</strong>
-                        <p>手机 ： 15735155451<br/></p>
-                    </li>
-                    <li class="sys">
-                        <i></i><strong>pc端作品</strong>
-                        <p><a href="天猫/index.html" target="_blank">天猫</a> &nbsp <a href="小米/xiaomi.html" target="_blank">小米 </a> &nbsp <a href="凡客/index.html" target="_blank">凡客</a><br/> <a href="pinguo/pinguo.html" target="_blank">苹果</a> &nbsp<a href="jingdong/index.html" target="_blank">京东</a> &nbsp <a href="移动/index.html" target="_blank">移动</a>&nbsp <a href="沙发网/index.html" target="_blank">沙发网</a></p>
-                    </li>
-                    <li class="app">
-                        <i></i><strong>手机端</strong>
-                        <p><a href="优异客/优异客首页/index.html" target="_blank">优异客</a></p>
-                    </li>
-                    <li class="host">
-                        <i></i><strong>整站和游戏</strong>
-                        <p><a href="weierjia/index.html" target="_blank">威尔佳</a> &nbsp <a href="待办事项.html" target="_blank">todolist</a> &nbsp <a href="扫雷/扫雷.html" target="_blank">扫雷</a><br/><a href="游戏打字/index.html" target="_blank">打字</a></p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div id="arrow">
-            <ul>
-                <li class="arrowup"></li>
-                <li class="arrowdown"></li>
-            </ul>
-        </div>
-
-        <div id="history">
-
-            <div class="title">
-                <h2>网站成长史</h2>
-                <div id="circle">
-                    <div class="cmsk"></div>
-                    <div class="circlecontent">
-                        <div thisyear="2017" class="timeblock">
-                            <span class="numf"></span>
-                            <span class="nums"></span>
-                            <span class="numt"></span>
-                            <span class="numfo"></span>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="timeyear">YEAR</div>
+    
+	<div  id="js_fullpage">
+    
+    	<!--个人简介-->
+        <div class="section">
+        	<div class="container container_1000 m_center align_center">
+            	<p class="mb20">
+                	<span class="head">
+                        <span class="zz"></span>
+                        <span class="border"></span>
+                        <img src="images/head.png" width="169" height="169" />
+                    </span>
+                </p>
+                <p class="p_info mb20">
+                	<span class="p_name">刘豪</span>
+                    <br />
+                    <span class="p_zhiwei">全栈工程师</span>
+                </p>
+                <p>
+                	<span class="zhishi zhishi_1"></span>
+                </p>
+                <p>
+                	<span class="zhishi zhishi_2"></span>
+                </p>
+                <p class="mb10">
+                	<span class="zhishi zhishi_3"></span>
+                </p>
+                
+                <p class="mb30">
+                	<span class="title_1">学习经历</span>
+                </p>
+                <div class="wrap_time m_center cf">
+                	<span class="time_start"></span><span class="time_end"></span>
+                    <div class="jingli time_1">
+                        <p class="jingli_time">2017-01 — 2017-03</p>
+                        <p class="jingli_info">学习ps 布局</p>
                     </div>
-                    <a href="#" class="clock"></a>
+                    <div class="jingli time_2">
+                        <p class="jingli_time">2017-03 — 2017-05</p>
+                        <p class="jingli_info">js</p>
+                    </div>
+                    <div class="jingli time_3">
+                        <p class="jingli_time">2017-05 — …</p>
+                        <p class="jingli_info">后台php</p>
+                    </div>
                 </div>
             </div>
-
-            <div id="content">
-                <ul class="list">
-                    <li style="margin-top:-110px;">
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2017</span>
-                                    <span class="md">0202</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">刚刚来到优异客</a></div>
-                                <div class="hisct">新奇和犹豫</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2017</span>
-                                    <span class="md">0208</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">刚刚来到优异客</a></div>
-                                <div class="hisct">新奇和犹豫</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2017</span>
-                                    <span class="md">0328</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">学了ps 页面布局之后</a></div>
-                                <div class="hisct">对自己有了信心</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2017</span>
-                                    <span class="md">0510</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">学了js jquery</a></div>
-                                <div class="hisct">觉得自己需要学习的还很多</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2013</span>
-                                    <span class="md">0508</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">初期讨论</a></div>
-                                <div class="hisct">在集体探讨下，发现目前的HTML5 CSS3 发展历程已经不能满足需求，集体讨论=，这时候，韩老师之前的设计稿被端上了会议桌。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2012</span>
-                                    <span class="md">0701</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">灵感迸发</a></div>
-                                <div class="hisct">某天晚上的凌晨三点一刻，预想建立这样一个功能的网站，专为网页设计师。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2012</span>
-                                    <span class="md">0524</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">HTML5 CSS3 发展历程 上线</a></div>
-                                <div class="hisct">虽然功能还未健全，但是我们已迫不及待的让它去接受广大用户的火眼金睛</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="liwrap">
-                            <div class="lileft">
-                                <div class="date">
-                                    <span class="year">2012</span>
-                                    <span class="md">0508</span>
-                                </div>
-                            </div>
-
-                            <div class="point"><b></b></div>
-
-                            <div class="liright">
-                                <div class="histt"><a href="#">初期讨论</a></div>
-                                <div class="hisct">在集体探讨下，发现目前的HTML5 CSS3 发展历程已经不能满足需求，集体讨论=，这时候，韩老师之前的设计稿被端上了会议桌。</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+        </div>
+        
+        <!--个人技能-->
+        <div class="section bg_fff m_center align_center">
+        	<p class="mb30">
+            	<span class="img_bg title_jn"></span>
+            </p>
+        	<p>
+                	<span class="zhishi zhishi_1"></span>
+                </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <div class="list_icon">
+                <p class="icon_cell icon_cell_1">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_2">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_3">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_4">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+<!--                 <div class="txt_intro">
+	<p>网页/平面/icon设计样样都来，当然离大神还很遥远</p>
+    <p>有代码洁癖，所以我的HTML是干净整洁规范的</p>
+    <p>情怀敲代码，远离IE678，CSS3很好用</p>
+    <p>写前端效果没问题，前提是基于Jquery框架</p>
+</div> -->
             </div>
         </div>
-        <!--<div class="contain">-->
+    	
+        <!--案例-->
+        <div class="section m_center align_center">
+        	<p class="mb30">
+                <span class="title_1">案例作品</span>
+            </p>
+        	<p>
+                <span class="zhishi zhishi_1"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <div class="container container_1000 m_center cf">
+            	<div class="container_case">
+                    <div class="container wrap_case cf" id="js_wrap_case">
+                        <ul class="list_case focus">
+                       
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+                             <a href="凡客/index.html"  target="_blank" >
+                                <span class="zz"></span>
+                                <img src="images/eq/fk.jpg" width="248" height="160"/>
+                                <p class="case_info">
+                                    <span>凡客</span>
+                                    <!-- <span>一个简单的网页布局</span> -->
+                                </p>
+                                </a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+                            <a href="小米/xiaomi.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/xm.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>小米官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+                                </a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+                            <a href="天猫/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/tm.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>天猫官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+                                </a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+                            <a href="pinguo/pinguo.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/pg.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>苹果官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+                                </a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+								<a href="移动/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/yd.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>移动网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+<a href="weierjia/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/we.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>威尔佳官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+<a href="jingdong/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/jd.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>京东官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="jas_cell_case">
+<a href="优异客/优异客首页/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/yy.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>优异客官网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
 
+                        </ul>
+                        <ul class="list_case focus">
+                             <li data-url="case-detail.html" data-name="拾艺客官网" class="ajs_cell_case">
+<a href="沙发网/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/sf.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>沙发网</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="js_ceall_case">
+<a href="扫雷/扫雷.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/sl.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>扫雷</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="js_celal_case">
+<a href="游戏打字/index.html" target="_blank">
+                                <span class="zz"></span>
+                                <img src="images/eq/dz.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>打字游戏</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+</a>
+                            </li>
+                            <li data-url="case-detail.html" data-name="拾艺客官网" class="js_celal_case">
+								<a href="画板  刘豪/画板.html" target="_blank"></a>
+                                <span class="zz"></span>
+                                <img src="images/eq/hb.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>画板</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p>
+
+                            </li>
+                            <li data-url="case-detail.html" data-name="ss拾艺客官网" class="aajs_cell_case">
+                            <a href="待办事项.html">
+                                <span class="zz"></span>
+                                <img src="images/eq/td.jpg" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>todolist</span>
+                                    <!-- <span>参与：设计、前端</span> -->
+                                </p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tips" id="js_tips">
+                	<span class="focus"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!--约-->
+        <div class="section align_center">
+        	<p class="mb30">
+            	<span class=" title_jn title_yue" style="width: 200px ;height: 100px;font-size: 30px;line-height: 100px;text-align: center;color: #ccc">联系方式</span>
+            </p>
+            <p>
+                	<span class="zhishi zhishi_1"></span>
+                </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <p>
+            	<span class="yue_info yue_1"><i>:15735165635</i></span>
+            </p>
+            <p>
+            	<span class="yue_info yue_2"><i>:1064513310@qq.com</i></span>
+            </p>
+            <p>
+            	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=413870769&site=qq&menu=yes" class="yue_info yue_3"><i>:1064513310</i></a>
+            </p>
+        </div>
     </div>
-    <!---->
-    <!--<div class="section">6</div>-->
-    <!--<div class="section">5</div>-->
-</div>
 </body>
-<script src="js/jQuery.js"></script>
-<script src="js/jquery.fullPage.js"></script>
-<script>
-    $(function () {
-        $(".box").fullpage({
-            //sectionsColor:['cyan', '#c40000', '#7BAABE', '#42c333', 'pink'],
-            scrollingSpeed: 1000,
-            anchors: ["p1", "p2", "p3", "p4", "p5"],
-            fixedElements: "#menu",//固定在哪儿
-            menu: "#menu",//绑定菜单栏
-            recordHistory: true,
-            navigation: true,
-            /*afterLoad:function (a,i) {
-             if(i)
-             }*/
-        })
-    })
-</script>
-<script type="text/javascript">
-    window.onload = function () {
-        //获取画布对象
-        var canvas = document.getElementById("canvas");
-        //获取画布的上下文
-        var context = canvas.getContext("2d");
-        //获取浏览器屏幕的宽度和高度
-        var W = window.innerWidth;
-        var H = window.innerHeight;
-        //设置canvas的宽度和高度
-        canvas.width = W;
-        canvas.height = H;
-        //每个文字的字体大小
-        var fontSize = 16;
-        //计算列
-        var colunms = Math.floor(W / fontSize);
-        //记录每列文字的y轴坐标
-        var drops = [];
-        //给每一个文字初始化一个起始点的位置
-        for (var i = 0; i < colunms; i++) {
-            drops.push(0);
-        }
-        //运动的文字
-        var str = "javascript html5 canvas";
-        //4:fillText(str,x,y);原理就是去更改y的坐标位置
-        //绘画的函数
-        function draw() {
-            context.fillStyle = "rgba(0,0,0,0.05)";
-            context.fillRect(0, 0, W, H);
-            //给字体设置样式
-            context.font = "700 " + fontSize + "px  微软雅黑";
-            //给字体添加颜色
-            context.fillStyle = "#2FD0B5";//可以rgb,hsl, 标准色，十六进制颜色
-            //写入画布中
-            for (var i = 0; i < colunms; i++) {
-                var index = Math.floor(Math.random() * str.length);
-                var x = i * fontSize;
-                var y = drops[i] * fontSize;
-                context.fillText(str[index], x, y);
-                //如果要改变时间，肯定就是改变每次他的起点
-                if (y >= canvas.height && Math.random() > 0.99) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        };
-        function randColor() {
-            var r = Math.floor(Math.random() * 256);
-            var g = Math.floor(Math.random() * 256);
-            var b = Math.floor(Math.random() * 256);
-            return "rgb(" + r + "," + g + "," + b + ")";
-        }
-
-        draw();
-        setInterval(draw, 30);
-    };
-</script>
 </html>
